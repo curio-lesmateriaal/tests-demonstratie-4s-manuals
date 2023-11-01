@@ -42,4 +42,13 @@ class ManualTest extends TestCase
     {
         $this->assertEquals('1.00GB', $this->getManualHumanReadableSize(1073741824));
     }
+
+    public function test_getFilesizeHumanReadableAttribute_magic_property_access_works()
+    {
+        $manual = new Manual();
+        $manual->filesize = 512;
+        $this->assertEquals('512 bytes', $manual->filesize_human_readable); // Is the same as:
+        // $this->assertEquals('512 bytes', $manual->getFilesizeHumanReadableAttribute());
+        // Thanks to Laravel magic: https://laravel.com/docs/8.x/eloquent-mutators#defining-an-accessor
+    }
 }

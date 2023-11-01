@@ -14,28 +14,7 @@ Deze repository is enkel bedoeld om te demonstreren hoe geautomatiseerd testen i
 10. Voer de tests uit met: `php artisan test`
 
 Als het goed is slagen alle tests, op één na:
-> ```bash
-> FAILED  Tests\Unit\ManualTest > get filesize human readable attribute bytes
->   Failed asserting that two strings are equal.
-> --- Expected
-> +++ Actual
-> @@ @@
-> -'1 byte'
-> +'1 bytes'
-> 
->   at tests\Unit\ManualTest.php:26
->      22▕
->      23▕     public function test_getFilesizeHumanReadableAttribute_bytes()
->      24▕     {
->      25▕         $this->assertEquals('0 bytes', $this->getManualHumanReadableSize(0));
->   ➜  26▕         $this->assertEquals('1 byte', $this->getManualHumanReadableSize(1));
->      27▕         $this->assertEquals('512 bytes', $this->getManualHumanReadableSize(512));
->      28▕         $this->assertEquals('1,023 bytes', $this->getManualHumanReadableSize(1023));
->      29▕     }
->      30▕
-> 
->   1   tests\Unit\ManualTest.php:26
-> ```
+![Command prompt of php artisan test, where a single test is shown to fail](test-results.png)
 
 ## Hoe de een *Unit test* is geschreven voor `getFilesizeHumanReadableAttribute()` in het `Manual`-model
 
