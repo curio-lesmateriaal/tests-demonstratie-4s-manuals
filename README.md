@@ -1,6 +1,11 @@
-# Demonstratie Geautomatiseerd Testen
+# Demonstratie Geautomatiseerd Testen (PHP)
 
 Deze repository is enkel bedoeld om te demonstreren hoe geautomatiseerd testen in zijn werk gaat. De code in deze repository is niet bedoeld om te gebruiken voor het 4S_Manuals project.
+
+> **Note**
+> We gebruiken voor deze demonstratie:
+> - Een Laravel 10.x Project
+> - PHPUnit Tests
 
 ## Opstarten
 
